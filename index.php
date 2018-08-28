@@ -20,7 +20,7 @@ register_activation_hook(__FILE__, array('HitsCounter', 'plugin_activation'));
 
 register_deactivation_hook(__FILE__, array('HitsCounter', 'plugin_deactivation'));
 
-add_action('wp_footer', 'record_visit');
+add_action('wp_footer', 'hitscounter_record_visit');
 
 add_action('admin_menu', 'hitscounter_admin_actions');
 

@@ -19,8 +19,8 @@ function hitscounter_install()
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 
-    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-    dbDelta( $sql );
+    require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+    dbDelta($sql);
 
 }
 
@@ -35,7 +35,7 @@ function hitscounter_uninstall()
     $wpdb->query($sql);
 }
 
-function record_visit()
+function hitscounter_record_visit()
 {
     global $wpdb;
 
@@ -67,10 +67,9 @@ function hitscounter_admin_actions()
         "Hits count on post", 
         "Hits Counter", 
         "manage_options", 
-        plugin_dir_path(__FILE__) . 'hits-count-admin.php',
+        plugin_dir_path(__FILE__) . 'hitscounter-admin.php',
         '',
         'dashicons-plus-alt',
         20
     );
 }
-
