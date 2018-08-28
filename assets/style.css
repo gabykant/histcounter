@@ -1,0 +1,19 @@
+.detail-content{
+    background: #fff;
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+}
+img{
+    width: 150px;
+}
+.first-item {
+    font-weight: bold;
+}
+.surround-border{
+    border: 1px solid #ddd;
+    margin-top: 50px;
+}
+table, h3{
+    padding: 10px;
+}
